@@ -1,0 +1,51 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.meta
+UnityAssetBundles/
+unity-*.apk
+# Unity Addressables local catalog
+/[Aa]ssets/AddressableAssetsData/*/*.bin
+/[Aa]ssets/StreamingAssets/aa/*
+
+# Java / Maven
+backend/target/
+*.class
+*.jar
+!infrastructure/**/*.jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Node
+node_modules/
+dist/
+.vite/
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage & reports
+coverage/
+*.log
