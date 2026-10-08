@@ -15,7 +15,7 @@ public class JwtTokenValidator implements TokenValidator {
 
     private final SecretKey secretKey;
 
-    public JwtTokenValidator(@Value("${jwt.secret:nitro-rush-default-jwt-secret-key-32bytes-long!}") String secret) {
+    public JwtTokenValidator(@Value("${app.jwt.secret:nitro-rush-default-jwt-secret-key-32bytes-long!}") String secret) {
         byte[] keyBytes = secret.getBytes(StandardCharsets.UTF_8);
         if (keyBytes.length < 32) {
             byte[] padded = new byte[32];

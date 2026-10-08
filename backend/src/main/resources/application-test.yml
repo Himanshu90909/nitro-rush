@@ -28,3 +28,10 @@ app:
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] %-5level %logger{36} - %msg%n"
+
+nitrorush:
+  matchmaking:
+    enabled: false
+  demo:
+    email: ""
+    password: ""

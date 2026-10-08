@@ -36,3 +36,10 @@ logging:
   pattern:
     level: "%5p"
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] %-5level %logger{36} - %msg%n"
+
+nitrorush:
+  matchmaking:
+    enabled: ${MATCHMAKING_ENABLED:true}
+  demo:
+    email: ${DEMO_EMAIL:}
+    password: ${DEMO_PASSWORD:}
