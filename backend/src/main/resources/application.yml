@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: nitro-rush-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/nitrorush}
+    username: ${DB_USERNAME:nitro}
+    password: ${DB_PASSWORD:nitro}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      url: ${REDIS_URL:redis://localhost:6379}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:nitro_rush_super_secret_jwt_key_32_bytes_min_dev_default_key_12345}
+    expiration-min: ${JWT_EXPIRATION_MIN:15}
+    refresh-expiration-days: ${JWT_REFRESH_EXPIRATION_DAYS:7}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+logging:
+  pattern:
+    level: "%5p"
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{requestId}] %-5level %logger{36} - %msg%n"
